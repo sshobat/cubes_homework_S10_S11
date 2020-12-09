@@ -1,0 +1,90 @@
+/* GENERAL STYLES */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.cf:before, .cf:after {
+    display: table;
+    content:'';
+    clear: both;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER STYLES */
+
+header {
+    height: 100px;
+    padding: 10px 50px;
+    background-color: rgb(219, 101, 101);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;    
+}
+
+header img {
+    height: 100%;
+    float: left;
+}
+
+header nav {
+    float: right;
+    padding-right: 30px;
+}
+
+header > nav > ul > li {
+    float: left;
+    
+}
+
+header > nav > ul > li > a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+header > nav > ul > li ul {
+    margin-top: 45px;
+}
+
+header > nav > ul > li ul li > a {
+    /* display: none; */
+    color: #fff;
+    background-color:  rgb(219, 101, 101);
+    
+}
+
+/* BANNER PHOTO STYLES */
+
+.main_banner {
+    width: 100%;
+    margin-top: 100px;
+
+}
+
+
+
+/* MAIN STYLES */
+
+main {
+    /* margin-top: 200px; */
+}
+
+
+
+
