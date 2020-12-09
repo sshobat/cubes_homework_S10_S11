@@ -26,13 +26,14 @@ a {
 /* HEADER STYLES */
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
     height: 100px;
     padding: 10px 50px;
     background-color: rgb(219, 101, 101);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;    
+    z-index: 1; 
 }
 
 header img {
@@ -40,17 +41,21 @@ header img {
     float: left;
 }
 
+/* main meny */
+
 header nav {
     float: right;
-    padding-right: 30px;
+    position: relative;
+    margin-top: 15px;
 }
 
 header > nav > ul > li {
     float: left;
-    
+    height: 60px;
 }
 
 header > nav > ul > li > a {
+    position: relative;
     text-decoration: none;
     color: #000;
     text-transform: uppercase;
@@ -58,15 +63,46 @@ header > nav > ul > li > a {
     margin-left: 20px;
 }
 
-header > nav > ul > li ul {
-    margin-top: 45px;
+header > nav > ul > li > a:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    background-color: #fff;
+    transition: all .3s ease;
+}
+
+header > nav > ul > li > a:hover {
+    color: #fff;
+}
+
+header > nav > ul > li > a:hover:after {
+    width: 100%;
+}
+
+/* dropdown meny */
+
+header > nav > ul li ul {
+    display: none;
+    position: absolute;
+    top: 50px;
+    background-color:  rgb(219, 101, 101);
+    padding: 0;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+header > nav > ul li:hover ul {
+    display: block;
 }
 
 header > nav > ul > li ul li > a {
-    /* display: none; */
     color: #fff;
-    background-color:  rgb(219, 101, 101);
-    
+    text-transform: uppercase;
+    line-height: 25px;
 }
 
 /* BANNER PHOTO STYLES */
@@ -74,17 +110,104 @@ header > nav > ul > li ul li > a {
 .main_banner {
     width: 100%;
     margin-top: 100px;
-
 }
 
+h1 {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    background-color: rgb(209, 204, 204);
+    color: #fff;
+    padding: 5px;
+}
 
-
-/* MAIN STYLES */
+/* MAIN AREA STYLES */
 
 main {
-    /* margin-top: 200px; */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgb(209, 204, 204);
+    padding: 50px 0;
 }
 
+main article {
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+    position: relative;
+}
 
+main article:nth-child(3n) {
+    margin-right: 0;
+}
 
+main article img {
+    width: 100%;
+}
+
+article p {
+    text-align: center;
+}
+
+.price {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: rgb(119, 22, 90);
+    padding: 5px;
+}
+
+/* FORM */
+
+main form {
+    text-align: center;
+    margin: 50px auto;
+    width: 406px;
+    border: 3px solid rgb(219, 101, 101);
+    border-radius: 15px;
+}
+
+main form label {
+    float: left;
+    width: 200px;
+}
+
+main form label input, 
+main form label select {
+    width: 150px;
+    text-align-last: center;
+    padding: 5px;
+    border: 1px #000 solid;
+    border-radius: 15px;
+}
+
+#reserve {
+    float: none;
+}
+
+input[type="submit"] {
+    margin: 20px;
+    background-color: rgb(219, 101, 101);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+form p {
+    margin-bottom: 0.5rem;
+}
+
+/* FOOTER */
+
+footer a {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
 
