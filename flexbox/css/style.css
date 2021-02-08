@@ -17,7 +17,9 @@ a {
     text-decoration: none;
 }
 
+/*************************************************************************/
 /* HEADER STYLES */
+/*************************************************************************/
 
 header {
     position: fixed;
@@ -40,7 +42,6 @@ header img {
 /* main meny */
 
 header nav {
-    
     position: relative;
     margin-top: 15px;
 }
@@ -48,11 +49,12 @@ header nav {
 header > nav > ul {
 display: flex;
 justify-content: space-between;
-width: 600px;
+
 }
 
 header > nav > ul > li {
     height: 60px;
+    padding-right: 20px;
 }
 
 header > nav > ul > li > a {
@@ -82,7 +84,9 @@ header > nav > ul > li > a:hover:after {
     width: 100%;
 }
 
+/*************************************************************************/
 /* dropdown meny */
+/*************************************************************************/
 
 header > nav > ul li ul {
     display: none;
@@ -104,14 +108,18 @@ header > nav > ul > li ul li > a {
     line-height: 25px;
 }
 
+/*************************************************************************/
 /* BANNER PHOTO STYLES */
+/*************************************************************************/
 
 .main_banner {
     width: 100%;
     margin-top: 100px;
 }
 
+/*************************************************************************/
 /* MAIN AREA STYLES */
+/*************************************************************************/
 
 main {
     width: 100%;
@@ -129,10 +137,6 @@ main section {
 main article {
     width: 32%;
     position: relative;
-}
-
-main article:nth-child(3n) {
-    margin-right: 0;
 }
 
 main article img {
@@ -153,12 +157,14 @@ article p {
     padding: 5px;
 }
 
+/*************************************************************************/
 /* FORM */
+/*************************************************************************/
 
 main form {
     text-align: center;
     margin: 50px auto;
-    width: 406px;
+    max-width: 406px;
     border: 3px solid rgb(219, 101, 101);
     border-radius: 15px;
 }
@@ -195,11 +201,75 @@ form p {
     margin-bottom: 0.5rem;
 }
 
+/*************************************************************************/
 /* FOOTER */
+/*************************************************************************/
 
 footer a {
     position: fixed;
     bottom: 0;
     right: 0;
+    z-index: 2;
 }
 
+/*************************************************************************/
+/* RESPONSIVE */
+/*************************************************************************/
+
+@media screen and (max-width: 1200px) {
+    main {
+        padding: 50px 20px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+
+    header {
+        width: 100%; 
+        height: 320px;
+        display: block;
+        text-align: center;  
+    }
+    
+    header > nav > ul {
+        display: block;
+    }
+    
+    header > nav > ul > li {
+        height: 40px;
+        width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header > nav > ul li:hover ul {
+        display: none;
+    }
+    .main_banner { 
+        margin-top: 350px;
+    }
+    
+}
+
+@media screen and (max-width: 760px) {
+    
+    header {
+        position: relative;
+    }
+    .main_banner {
+        margin-top: 30px;
+    }
+    main article {
+        width: 49%;
+    }
+
+}
+
+@media screen and (max-width: 530px) {
+    
+    main article {
+        width: 100%;
+    }
+    .flex-label {
+        display: block;
+    }
+}
